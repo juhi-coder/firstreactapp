@@ -1,9 +1,9 @@
-function ExpenseItems(){
-return (<div>
-    <h2>Expense Items</h2>
-    <div>Food Rs 10</div>
-    <div>Petrol Rs 100</div>
-    <div>Movies Rs 200</div>
-</div>)
+import React from "react";
+import Expenses from "./Expenses.js";
+
+function ExpenseItem(props) {
+  return props.expenses.map((expenses, index) => {
+    return <Expenses expenses={expenses} key={index} />;
+  });
 }
-export default ExpenseItems;
+export default ExpenseItem;
