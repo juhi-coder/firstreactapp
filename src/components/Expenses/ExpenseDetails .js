@@ -1,14 +1,13 @@
 import React from "react";
-
+import './ExpenseDetails.css';
 const ExpenseDetails=(props)=>{
 const title=props.title;
 const amount=props.amount;
-console.log('abcds')
 return(
     <div>
-    <h2>{title}</h2>
+    <h2 className="expense-item__description">{title}</h2>
 
-    <div>{amount}</div>
+    <div className="expense-item__price">{amount}</div>
     </div>
 );
 }
